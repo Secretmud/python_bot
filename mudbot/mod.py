@@ -71,7 +71,7 @@ while True:
         for x in command:
             if x in message:
                 index = command.index(x)
-                if data['commands'][index]['name'] == "!wikipedia":
+                if "lambda" in data['commands'][index]['return']:
                     x = eval(data['commands'][index]['return'])
                     message.split()
                     response = ("PRIVMSG " + CHAN + " :" + 
