@@ -1,32 +1,35 @@
-from random import randint
+import urllib.request
+import json
+import pprint
+import re
 class function_fun:
     def __init__(self, numb):
         self.numb = numb
 
+    def viewCount(self):
+        url = urllib.request.urlopen("http://tmi.twitch.tv/group/user/secretmud/chatters")
+        data = json.load(url)
+        return str(data['chatter_count'] - 1)
 
-    def memePicker(self, numb):
-        if  self.numb == 1:
-            return "✿*∗˵╰༼✪ᗜ✪༽╯˵∗*✿"
-        elif  self.numb == 2:
-            return "┏(-_-)┓┏(-_-)┛┗(-_-﻿ )┓"
-        elif self.numb == 3:
-            return "(ノ◉◞౪◟◉‵)ノ⌒[̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]"
-        elif self.numb == 4:
-            return "─=≡Σ((( つ◕ل͜◕)つ"
-
-    def olives(self, numb):
-        responses = ["I'm a cat mjau mjau mjau CoolCat CoolCat CoolCat CoolCat"]
-        r = randint(0, len(responses) - 1)
-        print(r)
-        return responses[r]
-
-    def quote(self):
-        responses = ["People who think they know everything are a great annoyance to those of us who do. -Isacc Asimov",
-                  "The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom. -Isacc Asimov",
-                  "1",
-                  "2",
-                  "3"
-                 ]
-        r = randint(0, len(responses) - 1)
-        print(r)
-        return responses[r]
+    def addCommand(self, new_id, name, use_type, command_return):
+        """
+            Adding a new command setting the name, type(who can use it) and what the command should return
+            {
+                "id": new_id,
+			    "name": name,
+			    "type": type,
+			    "return": command_return
+            }
+        """
+        regex = re.compile(r'[\r\n]')
+        command_return = regex.sub("", command_return)
+        pprint.pprint(str(new_id) + str(name) + str(use_type) + str(command_return))
+        json_format = {"id": new_id, "name": name, "type": use_type, "return": command_return}
+        with open("commands.json") as fp:
+            data = json.load(fp)
+        #pprint.pprint(data)    
+        with open("commands.json", "w") as commands:    
+            data['commands'].append(json_format)
+            json.dump(data, commands, sort_keys=True, indent=4)
+        commands.close()
+        fp.close()

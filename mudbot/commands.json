@@ -1,40 +1,58 @@
-
 {
-	"commands": [{
-			"id": 0,
-			"name" : "!cowbell",
-			"type": 0,
-			"return": "Give me some cowbells!"
-		},
-		{
-			"id": 1,
-			"name": "!oliveoil",
-			"type": 0,
-			"return": "I'm not really a fan... Olive's are nasty :<!"
-		},
-		{
-			"id": 2,
-			"name": "!wikipedia",
-			"type": 0,
-			"return": "lambda a: wikipedia.summary(a, sentences=2)"
-		},
-		{
-			"id": 3,
-			"name": "!music",
-			"type": 0,
-			"return": "Give me some cowbells!"
-		},
-		{
-			"id": 4,
-			"name": "!sound",
-			"type": 0,
-			"return": "Give me some cowbells!"
-		},
-		{
-			"id": 5,
-			"name": "!test",
-			"type": 0,
-			"return": "Give me some cowbells!"
-		}
-	]
+    "commands": [
+        {
+            "id": 0,
+            "name": "!cowbell",
+            "return": "Give me some cowbells!",
+            "type": 0
+        },
+        {
+            "id": 1,
+            "name": "!oliveoil",
+            "return": "I'm not really a fan... Olive's are nasty :<!",
+            "type": 0
+        },
+        {
+            "id": 2,
+            "name": "!wikipedia",
+            "return": "lambda a: wikipedia.summary(a, sentences=2)",
+            "type": 0
+        },
+        {
+            "id": 3,
+            "name": "!music",
+            "return": "",
+            "type": 0
+        },
+        {
+            "id": 4,
+            "name": "!sound",
+            "return": "Give me some cowbells!",
+            "type": 0
+        },
+        {
+            "id": 5,
+            "name": "!help",
+            "return": "These are my commands - !wisdom, !oliveoil, !cowbell",
+            "type": 0
+        },
+        {
+            "id": 6,
+            "name": "!viewers",
+            "return": "f.viewCount()",
+            "type": 0
+        },
+        {
+            "id": 7,
+            "name": "!addCommand",
+            "return": "",
+            "type": 0
+        },
+        {
+            "id": 8,
+            "name": "!spam",
+            "return": "Kappa spam Kappa spam Kappa",
+            "type": "0"
+        }
+    ]
 }
