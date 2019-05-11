@@ -1,0 +1,40 @@
+
+{
+	"commands": [{
+			"id": 0,
+			"name" : "!cowbell",
+			"type": 0,
+			"return": "Give me some cowbells!"
+		},
+		{
+			"id": 1,
+			"name": "!oliveoil",
+			"type": 0,
+			"return": "I'm not really a fan... Olive's are nasty :<!"
+		},
+		{
+			"id": 2,
+			"name": "!wikipedia",
+			"type": 0,
+			"return": "lambda a: wikipedia.summary(a, sentences=2)"
+		},
+		{
+			"id": 3,
+			"name": "!music",
+			"type": 0,
+			"return": "Give me some cowbells!"
+		},
+		{
+			"id": 4,
+			"name": "!sound",
+			"type": 0,
+			"return": "Give me some cowbells!"
+		},
+		{
+			"id": 5,
+			"name": "!test",
+			"type": 0,
+			"return": "Give me some cowbells!"
+		}
+	]
+}
