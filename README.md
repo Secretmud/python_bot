@@ -19,7 +19,7 @@ of them returns a anonymous function, this is used to search for a keyword on wi
 
 If you want to create more functions like this add make the return into a lambda function. The lambda is ran like this:
 ```Python
-    lambda parameters: function(paramenters)
+lambda parameters: function(paramenters)
 ```
 
 ## connection.py
